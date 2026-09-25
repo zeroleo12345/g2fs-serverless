@@ -503,11 +503,10 @@ addEventListener('fetch', event => {
   `
 
   if (request.method === 'POST') {
+    console.log("POST")
     return event.respondWith(postFeiShuUrl(request))
   } else if (request.method === 'GET') {
-    return event.respondWith(new Response(html_content, {
-      headers: { 'content-type': 'text/html' },
-    }))
+    return event.respondWith(new Response(html_content, {headers: { 'content-type': 'text/html' },}))
   }
 })
 
@@ -568,7 +567,7 @@ async function postFeiShuUrl(request) {
           "elements": [
             {
               "tag": "plain_text",
-              "content": "Sent by [G2FS Serverless](https://github.com/n0vad3v/g2fs-serverless)"
+              "content": "Sent by [G2FS Serverless](https://github.com/zeroleo12345/g2fs-serverless)"
             }
           ]
         }
