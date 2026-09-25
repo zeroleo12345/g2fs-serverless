@@ -499,7 +499,7 @@ addEventListener('fetch', event => {
           </div>
       </body>
   </html>
-  
+  `
   
   const sourceIp = request.headers.get('CF-Connecting-IP')
   console.log(`source IP: ${sourceIp}`)
