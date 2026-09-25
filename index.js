@@ -500,8 +500,10 @@ addEventListener('fetch', event => {
       </body>
   </html>
   
-  `
-
+  
+  const sourceIp = request.headers.get('CF-Connecting-IP')
+  console.log(`source IP: ${sourceIp}`)
+  
   if (request.method === 'POST') {
     console.log("POST")
     return event.respondWith(postFeiShuUrl(request))
